@@ -1,0 +1,749 @@
+/* --- Reset CSS --- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--primary-font), Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+svg,
+video,
+iframe,
+picture {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+form,
+input,
+textarea,
+option,
+label,
+button {
+    display: block;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+/* --- Reset CSS --- */
+
+/* ---Custom Properties--- */
+:root {
+    --primary-font: 'Open Sans';
+
+    --blue-nm: #073B4C;
+    --yellowgreen-nm: #CAD49D;
+    --orange-nm: #E28413;
+
+    --titlefont-size: 1.75rem;
+}
+
+/* ---Custom Properties--- */
+
+/* ---Custom Scrollbar--- */
+::-webkit-scrollbar {
+    width: .625rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-radius: .625rem;
+}
+
+.no-scrollbar {
+    /* This class will be applied to the body once opened the mobile menu, to hide the scrollbar */
+    overflow: hidden;
+}
+
+/* ---Custom Scrollbar--- */
+
+/* ---HEADER--- */
+.header {
+    width: 100%;
+    background-color: var(--blue-nm);
+
+    padding: 1rem 3rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__h1 {
+    width: 3rem;
+
+    position: relative;
+    z-index: 3;
+
+    animation: rotation 2s ease-out 1 both;
+}
+
+/* HEADER > Burger Icon */
+.header__burger {
+    width: 2.5rem;
+    min-height: 1.3rem;
+
+    cursor: pointer;
+
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    z-index: 3;
+}
+
+.burger__bar,
+.header__burger::before,
+.header__burger::after {
+    content: '';
+    display: block;
+
+    height: .2188rem;
+    width: 80%;
+    background-color: var(--yellowgreen-nm);
+
+    border-radius: .125rem;
+}
+
+.header__burger::before {
+    width: 100%;
+}
+
+.header__burger::after {
+    width: 60%;
+}
+
+/* HEADER > Burger Icon */
+
+.header__links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__nav {}
+
+.header__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__li {}
+
+.header__a {
+    color: var(--yellowgreen-nm);
+
+    transition: all .5s ease;
+}
+
+.header__a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.ig__svg {
+    width: 1.6rem;
+    min-height: 1.6rem;
+}
+
+/* ---HEADER--- */
+
+/* ---MAIN--- */
+/* ---Section 1 | Move Well--- */
+.mvwell {
+    width: 100%;
+    min-height: 65vh;
+    background-color: orange;
+    background: url(../assets/battle_ropes.webp) no-repeat center / cover scroll;
+    padding: 8rem 5%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.mvwell__h2 {
+    width: 80%;
+    max-width: 50rem;
+
+    font-size: 2.375rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: .125rem .125rem .125rem black;
+}
+
+.mvwell__p {
+    width: 80%;
+    max-width: 50rem;
+
+    font-family: var(--primary-font);
+    font-size: 1.125rem;
+
+    color: white;
+    text-shadow: .125rem .125rem .125rem black;
+}
+
+/* ---Section 1 | Move Well--- */
+
+/* ---Section 2 | What to expect--- */
+.wtexpect {
+    width: 100%;
+    background-color: var(--blue-nm);
+
+    padding: 5rem 0;
+}
+
+.wtexpect__wrapper {
+    width: 90%;
+    max-width: 81.25rem;
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wtexpect__h2 {
+    font-size: var(--titlefont-size);
+    font-weight: 500;
+    color: var(--orange-nm);
+    text-align: center;
+}
+
+.wtexpect__columns {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.wtexpect__column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    transition: all .5s ease;
+}
+
+.wtexpect__column:hover {
+    transform: scale(1.1);
+}
+
+.wtexpect__h3 {
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.wtexpect__p {
+    color: white;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+
+/* ---Section 2 | What to expect--- */
+
+/* ---Section 3 | Contact --- */
+.contact {
+    width: 100%;
+    min-height: 50vh;
+    background-color: lightgrey;
+    background: url(../assets/web_hero_kb_and_rings.jpg) no-repeat center / cover fixed;
+
+    padding: 3rem 0;
+}
+
+.contact__wrapper {
+    width: 90%;
+    max-width: 81.25rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1rem;
+
+    border-radius: 1.25rem;
+}
+
+.contact__info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    color: white;
+}
+
+.contact__span {
+    font-size: 1.25rem;
+}
+
+.contact__p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+
+.contact__form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form__input,
+.form__textarea {
+    background-color: lightgrey;
+    color: rgb(79, 79, 79);
+
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: bold;
+
+    padding: .5rem 1rem;
+
+    outline: none;
+
+    border-radius: .3125rem;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: rgb(79, 79, 79);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    border: .125rem solid var(--orange-nm);
+}
+
+.info {
+    width: 100%;
+    min-height: 9.375rem;
+
+    display: inline;
+
+    position: relative;
+}
+
+.info::placeholder {
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+}
+
+.submit {
+    cursor: pointer;
+}
+
+/* ---Section 3 | Contact --- */
+
+/* ---Section 3 | FAQs --- */
+.faqs {
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+
+    padding: 3rem 0;
+}
+
+.faqs__wrapper {
+    width: 90%;
+    max-width: 81.25rem;
+    background-color: lightgray;
+
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.faqs__h2 {
+    font-size: var(--titlefont-size);
+    font-weight: 500;
+}
+
+.faqs__p {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+
+.faqs__ul {
+    width: 60%;
+    margin: .5rem 0 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.faqs__li {
+    width: 100%;
+}
+
+.faqs__li:first-child {
+    /* This applies a gap in between the different steps of the process of the first FAQ */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.faqs__li:first-child>h3 {
+    /* This puts the h3 of the first li at the same distance from the p as in the same li */
+    margin: 0;
+}
+
+.faqs__li::after {
+    /* This creates a divide under each li */
+    content: '';
+    display: block;
+    width: 100%;
+    height: .0625rem;
+    background-color: black;
+
+    margin: .5rem 0 0;
+}
+
+.faqs__li:last-child::after {
+    /* This allows to make disapear the "divider" underneath the last li */
+    display: none;
+}
+
+.faqs__h3 {
+    margin: 0 0 .5rem;
+    font-size: 1.25rem;
+}
+
+/* ---Section 3 | FAQs --- */
+/* ---MAIN--- */
+
+/* ---FOOTER--- */
+.footer {
+    width: 100%;
+    min-height: 40vh;
+    background-color: var(--blue-nm);
+
+    padding: 2rem 0;
+    /* In this case, we use a padding of 2 rem instead of 6 rem since the previous section is the same color.*/
+}
+
+.footer__wrapper {
+    width: 90%;
+    max-width: 81.25rem;
+
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__h3 {
+    width: 13rem;
+}
+
+.footer__nav {}
+
+.footer__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.footer__li {
+    color: var(--yellowgreen-nm);
+
+    transition: all .5s ease;
+}
+
+.footer__li:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.ig {
+    display: inline;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mail {
+    display: inline;
+    text-decoration: underline;
+}
+
+.footer__span {
+    color: var(--yellowgreen-nm);
+
+    text-align: center;
+
+    font-family: var(--primary-font);
+
+    font-size: 1rem;
+}
+
+.ig,
+.mail {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.0625rem;
+}
+
+/* ---Newsletter--- */
+.newsletter {
+    width: 95%;
+    max-width: 31.25rem;
+    margin: 2rem 0 0;
+    padding: 2rem;
+
+    border-radius: .625rem;
+    background: linear-gradient(145deg, #073b4c, #084559);
+    box-shadow: 1.875rem 1.875rem 3.9375rem #06313f,
+        -1.875rem -1.875rem 3.9375rem #084559;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.newsletter__span {
+    color: var(--yellowgreen-nm);
+
+    text-align: center;
+
+    font-family: var(--primary-font);
+
+    font-size: 1rem;
+}
+
+.newsletter__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.newsletter__input {
+    background-color: lightgrey;
+    color: rgb(79, 79, 79);
+    padding: .5rem 1rem;
+    outline: none;
+    border-radius: .3125rem;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.submit {
+    background-color: #3D3D3D;
+    color: white;
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+
+.submit:hover {
+    background-color: #535353;
+}
+
+/* ---Newsletter--- */
+/* ---FOOTER--- */
+
+/* ---@MEDIAs--- */
+@media (max-width: 43.75rem) {
+    .contact__wrapper {
+        width: 90%;
+    }
+
+    .faqs__ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 43.125rem) {
+
+    /* This allows the burger Icon to substitute the Nav on the header */
+    .header__links {
+        width: 100%;
+        height: 100%;
+        background-color: #073b4c;
+
+        padding: 13rem;
+
+        flex-flow: column nowrap;
+
+        transform: scale(1);
+        opacity: 0;
+        pointer-events: none;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        transition: all .5s ease;
+    }
+
+    .header__links.active {
+        display: flex;
+
+        transform: scale(1.3);
+        opacity: 1;
+
+        pointer-events: auto;
+    }
+
+    .header__ul {
+        flex-flow: column nowrap;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .wtexpect__columns {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (max-width: 30rem) {
+    .mvwell {
+        min-height: 60vh;
+    }
+
+    .footer {
+        min-height: 0;
+        padding: 3rem 0;
+    }
+
+    .footer__ul {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 25rem) {
+    .contact__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    }
+}
+
+@media (max-width: 22.5rem) {
+    .mvwell__wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    }
+}
+
+/* ---@MEDIAs--- */
+
+/* ---KEYFRAMES--- */
+@keyframes rotation {
+
+    /* This keyframe activates the logo animation when loading the website */
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: .3;
+    }
+
+    100% {
+        transform: rotate(3600deg);
+        opacity: 1;
+    }
+}
+
+/* ---KEYFRAMES--- */

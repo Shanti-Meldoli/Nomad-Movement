@@ -1,0 +1,184 @@
+/* ---RESET CSS--- */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body{
+    font-family: var(--primary-font), Arial, Helvetica, sans-serif;
+    background-color: var(--blue-nm);
+}
+li{
+    list-style: none;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong{
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: normal;
+}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+img , svg , video , iframe , picture{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+form , input , textarea , option , label , button{
+    display: block;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: transparent;
+}
+/* ---RESET CSS--- */
+
+/* ---Custom Properties--- */
+:root{
+    --primary-font: 'Open Sans';
+
+    --blue-nm: #073B4C;
+    --yellowgreen-nm: #CAD49D;
+    --orange-nm: #E28413;
+
+    --titlefont-size: 1.75rem;
+}
+/* ---Custom Properties--- */
+
+/* ---Custom Scrollbar--- */
+::-webkit-scrollbar{
+    width: .625rem;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-radius: .625rem;
+}
+.no-scrollbar{ /* This class will be applied to the body once opened the mobile menu, to hide the scrollbar */
+    overflow: hidden;
+}
+/* ---Custom Scrollbar--- */
+
+/* ---MAIN--- */
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    width: 90%;
+    min-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    
+    padding: 10rem 1rem 0;
+    margin: 10vh 0 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+    border-radius: .625rem;
+}
+.hero__span{
+    font-size: var(--titlefont-size);
+    font-weight: 600;
+}
+.hero__p{
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+.hero__a{
+    background-color: var(--blue-nm);
+
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+    border: 1px solid black;
+    border-radius: 1.5625rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow: 0 .2rem .2rem rgba(0,0,0, .2);
+
+    transition: all .5s ease;
+}
+.hero__a:hover{
+    background-color: var(--orange-nm);
+}
+/* ---Newsletter--- */
+.newsletter{
+    width: 95%;
+    max-width: 31.25rem;
+    background-color: var(--blue-nm);
+    padding: 2rem;
+
+    border-radius: .625rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.newsletter__span{
+    color: white;
+
+    text-align: center;
+    
+    font-family: var(--primary-font);
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+.newsletter__wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.newsletter__input{
+    background-color: lightgrey;
+    color: rgb(79, 79, 79);
+    padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: .3125rem;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.submit{
+    background-color: #3D3D3D;
+    color: white;
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+.submit:hover{
+    background-color: #535353;
+}
+/* ---Newsletter--- */
+/* ---MAIN--- */
