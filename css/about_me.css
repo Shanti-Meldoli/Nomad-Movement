@@ -179,6 +179,7 @@ button {
 
 .header__a {
     color: var(--yellowgreen-nm);
+    text-align: center;
 
     transition: all .5s ease;
 }
@@ -200,7 +201,7 @@ button {
 
 .about {
     background-color: lightgray;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .about__wrapper {
@@ -210,7 +211,7 @@ button {
     background-color: lightgray;
 
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 0;
 
     display: flex;
     flex-flow: row wrap;
@@ -279,9 +280,9 @@ button {
 
 .footer__ul {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -391,14 +392,21 @@ button {
 /* ---@MEDIAs--- */
 @media (max-width: 76.125rem) {
     .about__info {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .about__img {
         max-width: 60%;
     }
 }
-
+@media (max-width: 56.25rem) {
+    .header{ /* This aligns the header elements with the padding of the rest of the page */
+        padding: 1rem 5%;
+    }
+    .about__img {
+        max-width: 80%;
+    }
+}
 @media (max-width: 43.125rem) {
 
     /* This allows the burger Icon to substitute the Nav on the header */
@@ -407,7 +415,7 @@ button {
         height: 100%;
         background-color: #073b4c;
 
-        padding: 13rem;
+        padding: 13rem 0 0;
 
         flex-flow: column nowrap;
 
@@ -438,6 +446,9 @@ button {
 
     .header__burger {
         display: flex;
+    }
+    .about__img {
+        max-width: 100%;
     }
 }
 

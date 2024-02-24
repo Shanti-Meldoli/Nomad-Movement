@@ -114,7 +114,7 @@ button {
     width: 3rem;
 
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
     animation: rotation 2s ease-out 1 both;
 }
@@ -131,7 +131,7 @@ button {
     justify-content: space-between;
     align-items: flex-end;
 
-    z-index: 3;
+    z-index: 4;
 }
 
 .burger__bar,
@@ -179,6 +179,7 @@ button {
 
 .header__a {
     color: var(--yellowgreen-nm);
+    text-align: center;
 
     transition: all .5s ease;
 }
@@ -209,8 +210,19 @@ button {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-}
 
+    position: relative; /* Ensure the pseudo-element positions relative to this container */
+}
+.mvwell::before {
+    content: "";
+    position: absolute; /* Position relative to the .mvwell container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Black color with desired opacity */
+    z-index: 1; /* Ensures it sits above the background image but below the text */
+}
 .mvwell__h2 {
     width: 80%;
     max-width: 50rem;
@@ -218,7 +230,10 @@ button {
     font-size: 2.375rem;
     font-weight: 600;
     color: white;
-    text-shadow: .125rem .125rem .125rem black;
+    text-shadow: 1px 1px 1px black;
+
+    position: relative;
+    z-index: 2; /* Ensures it sits above the pseudo-element */
 }
 
 .mvwell__p {
@@ -229,7 +244,10 @@ button {
     font-size: 1.125rem;
 
     color: white;
-    text-shadow: .125rem .125rem .125rem black;
+    text-shadow: 1px 1px 1px black;
+
+    position: relative;
+    z-index: 2; /* Ensures it sits above the pseudo-element */
 }
 
 /* ---Section 1 | Move Well--- */
@@ -526,9 +544,9 @@ button {
 
 .footer__ul {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -636,6 +654,11 @@ button {
 /* ---FOOTER--- */
 
 /* ---@MEDIAs--- */
+@media (max-width: 56.25rem) {
+    .header{ /* This aligns the header elements with the padding of the rest of the page */
+        padding: 1rem 5%;
+    }
+}
 @media (max-width: 43.75rem) {
     .contact__wrapper {
         width: 90%;
@@ -654,7 +677,7 @@ button {
         height: 100%;
         background-color: #073b4c;
 
-        padding: 13rem;
+        padding: 13rem 0 0;
 
         flex-flow: column nowrap;
 
@@ -665,7 +688,7 @@ button {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 3;
 
         transition: all .5s ease;
     }
@@ -686,7 +709,9 @@ button {
     .header__burger {
         display: flex;
     }
-
+    .mvwell{
+        background: url(../assets/battle_ropes_responsive.webp) no-repeat right / cover scroll;
+    }
     .wtexpect__columns {
         flex-flow: column nowrap;
     }
@@ -695,17 +720,15 @@ button {
 @media (max-width: 30rem) {
     .mvwell {
         min-height: 60vh;
+        padding: 4rem 5%;
+    }
+    .mvwell__h2{
+        font-size: 2.125rem;
     }
 
     .footer {
         min-height: 0;
         padding: 3rem 0;
-    }
-
-    .footer__ul {
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
     }
 }
 

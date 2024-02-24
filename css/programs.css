@@ -97,6 +97,7 @@ form , input , textarea , option , label , button{
 .hero__span{
     font-size: var(--titlefont-size);
     font-weight: 600;
+    text-align: center;
 }
 .hero__p{
     text-align: center;
@@ -182,3 +183,18 @@ form , input , textarea , option , label , button{
 }
 /* ---Newsletter--- */
 /* ---MAIN--- */
+
+/* ---@MEDIAs--- */
+@media (max-width: 49.375rem){
+    .hero{
+        min-height: 0;
+        padding: 5rem 1rem 5rem;
+    }
+}
+@media (max-width: 25rem){
+    .hero{
+        padding: 3rem 1rem 3rem;
+    }
+}
+/* ---@MEDIAs--- */
+

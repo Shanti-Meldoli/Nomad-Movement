@@ -135,7 +135,12 @@
                     <p class="about__p">Keep Moving!
                     </p>
                 </div>
-                <img src="assets/ring_support.jpg" alt="Imagen de Shanti en las anillas" class="about__img">
+                <picture class="about__img">
+                    <!-- When the screen width is less than 690px, use this image -->
+                    <source srcset="assets/ring_support_responsive.jpg" media="(max-width: 690px)">
+                    <!-- Default image to use when the above media condition is not true -->
+                    <img src="assets/ring_support.jpg" alt="Imagen de Shanti en las anillas" >
+                </picture>
             </div>
         </section>
     </main>
