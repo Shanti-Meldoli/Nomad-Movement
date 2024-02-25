@@ -317,7 +317,6 @@ button {
 /* ---Section 1 | About--- */
 .section {
     width: 100%;
-    min-height: 0;
     background-color: var(--blue-nm);
 
     padding: 5rem 0;
@@ -375,7 +374,80 @@ button {
 
 /* ---Section 1 | About--- */
 
-/* ---Section 2 | CTA: Get Started--- */
+/* ---Section 2 | Testimonials--- */
+.testimonials{
+    background-color: lightgray;
+
+    padding: 5rem 2rem;
+
+    text-align: center;
+}
+.testimonials__h2{
+    font-size: var(--titlefont-size);
+    font-weight: 500;
+}
+.testimonials__slider{
+    width: 90%;
+    max-width: 120rem;
+
+    margin: auto;
+
+    position: relative;
+    overflow: hidden;
+}
+.testimonials__arrow {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: calc(50% - (1rem / 2));
+    font-size: 1rem;
+    cursor: pointer;
+
+    z-index: 1;
+}
+
+.testimonials__arrow:first-of-type {
+    left: .625rem;
+}
+
+.testimonials__arrow:last-of-type {
+    right: .625rem;
+}
+.testimonials__container{    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    transition: all .5s ease;
+}
+.testimonial__card{
+    flex: 0 0 100%; /* Each card takes full width of the container */
+    background-color: transparent;
+    
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial__img{
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: red;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+}
+/* ---Section 2 | Testimonials--- */
+
+/* ---Section 3 | CTA: Get Started--- */
 .getstarted {
     background-color: transparent;
 }
@@ -478,7 +550,7 @@ button {
     transform: translateX(10%);
 }
 
-/* ---Section 2 | CTA: Get Started--- */
+/* ---Section 3 | CTA: Get Started--- */
 
 /* ---MAIN--- */
 
