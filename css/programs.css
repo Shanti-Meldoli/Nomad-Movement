@@ -83,8 +83,8 @@ form , input , textarea , option , label , button{
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     
-    padding: 10rem 1rem 0;
-    margin: 10vh 0 0;
+    padding: 15vh 1rem 2rem;
+    margin: 10vh 0 2rem;
 
     display: flex;
     flex-flow: column nowrap;

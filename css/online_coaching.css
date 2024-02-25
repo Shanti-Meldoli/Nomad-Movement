@@ -203,7 +203,7 @@ button {
     min-height: 65vh;
     background-color: orange;
     background: url(../assets/battle_ropes.webp) no-repeat center / cover scroll;
-    padding: 8rem 5%;
+    padding: 5rem 5%;
 
     display: flex;
     flex-flow: column nowrap;
@@ -660,10 +660,12 @@ button {
     }
 }
 @media (max-width: 43.75rem) {
+    .mvwell {
+        padding: 4rem 5%;
+    }
     .contact__wrapper {
         width: 90%;
     }
-
     .faqs__ul {
         width: 100%;
     }
@@ -720,7 +722,7 @@ button {
 @media (max-width: 30rem) {
     .mvwell {
         min-height: 60vh;
-        padding: 4rem 5%;
+        padding: 3rem 5%;
     }
     .mvwell__h2{
         font-size: 2.125rem;
