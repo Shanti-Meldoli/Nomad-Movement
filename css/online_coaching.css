@@ -474,40 +474,39 @@ button {
 .faqs__li {
     width: 100%;
 }
+.faqs__question{
+    margin: 0 0 .5rem;
 
-.faqs__li:first-child {
-    /* This applies a gap in between the different steps of the process of the first FAQ */
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+
+    cursor: pointer;
+}
+.faqs__svg{
+    width: 1rem;
+    min-height: 1rem;
+
+    transition: all .2s ease;
+}
+.faqs__svg.active{
+    transform: rotate(90deg);
+}
+.faqs__h3 {
+    font-size: 1.25rem;
+}
+.faqs__answer{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     gap: .5rem;
-}
 
-.faqs__li:first-child>h3 {
-    /* This puts the h3 of the first li at the same distance from the p as in the same li */
-    margin: 0;
-}
+    overflow: hidden;
 
-.faqs__li::after {
-    /* This creates a divide under each li */
-    content: '';
-    display: block;
-    width: 100%;
-    height: .0625rem;
-    background-color: black;
-
-    margin: .5rem 0 0;
-}
-
-.faqs__li:last-child::after {
-    /* This allows to make disapear the "divider" underneath the last li */
-    display: none;
-}
-
-.faqs__h3 {
-    margin: 0 0 .5rem;
-    font-size: 1.25rem;
+    transition: all .5s ease;
 }
 
 /* ---Section 3 | FAQs --- */
@@ -716,6 +715,9 @@ button {
     }
     .wtexpect__columns {
         flex-flow: column nowrap;
+    }
+    .faqs__wrapper{
+        width: 100%;
     }
 }
 

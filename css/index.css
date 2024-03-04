@@ -390,14 +390,15 @@ button {
     width: 90%;
     max-width: 120rem;
 
+    padding: 0 1rem;
     margin: auto;
 
     position: relative;
     overflow: hidden;
 }
 .testimonials__arrow {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: absolute;
     top: calc(50% - (1rem / 2));
     font-size: 1rem;
@@ -407,11 +408,11 @@ button {
 }
 
 .testimonials__arrow:first-of-type {
-    left: .625rem;
+    left: 0;
 }
 
 .testimonials__arrow:last-of-type {
-    right: .625rem;
+    right: 0;
 }
 .testimonials__container{    
     display: flex;
@@ -438,7 +439,6 @@ button {
 .testimonial__img{
     width: 6.25rem;
     height: 6.25rem;
-    background-color: red;
 
     object-fit: cover;
     object-position: center;
